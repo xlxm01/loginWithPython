@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <link href="static/css/my-socnet-style.css" rel="stylesheet" type="text/css"/>
+    <title>
+        SocNet
+    </title>
+</head>
+<body>
+<div id="container">
+    <a href="/">
+        SocNet
+    </a>
+    |
+    {% if logged %}
+        <a href="home">
+            Home
+        </a>
+        |
+        <a href="profile">
+            Profile
+        </a>
+        |
+        <a href="logout">
+            Log Out ({{ nickname }})
+        </a>
+    {% else %}
+        <a href="login">
+            Log In
+        </a>
+        |
+        <a href="signup">
+            Sign Up
+        </a>
+    {% endif %}
+    <h1>
+        Hi, Welcome to the SocNet
+    </h1>
+    <div>
+        <p>Choose <b>Sign Up</b> if you are a new user</p>
+        <p>Choose <b>Login</b> if you are user of SocNet</p>
+        <p>Choose <b>Home</b> to start to write Posts</p>
+    </div>
+</div>
+</body>
+</html>
